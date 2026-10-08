@@ -13,8 +13,6 @@ mysqli_set_charset($koneksi, "utf8mb4");
 
 mysqli_select_db($koneksi, "akademik");
 
-// batas ss
-
 $sqlCreateTables = [
     "CREATE TABLE IF NOT EXISTS mahasiswa (
             id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
