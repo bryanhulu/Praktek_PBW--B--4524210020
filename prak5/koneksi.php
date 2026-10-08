@@ -10,5 +10,3 @@ $koneksi = mysqli_connect($host, $user, $password, "", $port);
 if (! $koneksi) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
-
-echo "Koneksi ke server MySQL berhasil!\n";
