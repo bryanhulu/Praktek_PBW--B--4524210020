@@ -8,8 +8,6 @@
 <p>Dokumentasi laporan, latihan, dan proyek praktikum Pemrograman Berbasis Web.</p>
 
 <br>
-
-<img src="https://img.shields.io/badge/📚_PRAKTIKUM-07-2563EB?style=for-the-badge" alt="7 folder praktikum">
 <img src="https://img.shields.io/badge/💻_BAHASA-PHP%20%7C%20HTML%20%7C%20CSS-7C3AED?style=for-the-badge" alt="PHP, HTML, CSS">
 <img src="https://img.shields.io/badge/🗄️_DATABASE-MySQL-0891B2?style=for-the-badge" alt="MySQL">
 
