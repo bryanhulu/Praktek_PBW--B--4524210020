@@ -1,0 +1,277 @@
+:root {
+    color-scheme: light;
+    --ink: #172943;
+    --muted: #6f7f94;
+    --line: #dce5f1;
+    --paper: #ffffff;
+    --canvas: #f3f7ff;
+    --blue: #0049AD;
+    --blue-deep: #00377F;
+    --blue-light: #4B91F1;
+    --blue-soft: #eaf2ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        linear-gradient(135deg, rgba(0, 73, 173, 0.055) 0%, transparent 38%),
+        linear-gradient(315deg, rgba(75, 145, 241, 0.075) 0%, transparent 34%),
+        linear-gradient(145deg, #f7f9ff 0%, var(--canvas) 54%, #f8faff 100%);
+    color: var(--ink);
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.topbar {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(28px, calc((100vw - 1180px) / 2));
+    background: linear-gradient(100deg, #ffffff 0%, #f5f9ff 100%);
+    border-bottom: 1px solid #dce7f5;
+    box-shadow: 0 3px 14px rgba(23, 55, 96, 0.035);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--ink);
+    font-family: Manrope, sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.brand-mark {
+    width: 32px;
+    height: 32px;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    background: linear-gradient(140deg, var(--blue) 0%, #1264cf 58%, var(--blue-light) 100%);
+    color: white;
+    font-size: 15px;
+    box-shadow: 0 5px 12px rgba(0, 73, 173, 0.2);
+}
+
+.topbar-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+main {
+    width: min(1180px, calc(100% - 56px));
+    margin: 0 auto;
+    padding: 48px 0 64px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 12px;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    width: 18px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--blue), var(--blue-light));
+    content: "";
+}
+
+.page-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+h1 {
+    margin: 0;
+    font-family: Manrope, "Segoe UI", sans-serif;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1.15;
+}
+
+.intro {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.record-summary {
+    flex: 0 0 auto;
+    min-width: 190px;
+    padding: 14px 18px;
+    overflow: hidden;
+    border-left: 3px solid #8fc1ff;
+    background: linear-gradient(115deg, var(--blue-deep) 0%, var(--blue) 52%, #347fe0 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(0, 73, 173, 0.18);
+}
+
+.record-summary strong {
+    display: block;
+    font-family: Manrope, sans-serif;
+    font-size: 23px;
+    line-height: 1.1;
+}
+
+.record-summary span {
+    display: block;
+    margin-top: 5px;
+    color: #d8e9ff;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.directory {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: 0 14px 36px rgba(23, 55, 96, 0.065);
+}
+
+.directory-toolbar {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--line);
+}
+
+.directory-title {
+    margin: 0;
+    font-family: Manrope, sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.directory-caption {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.search {
+    width: min(280px, 42%);
+    height: 40px;
+    padding: 0 13px;
+    border: 1px solid #dce4df;
+    border-radius: 6px;
+    outline: none;
+    background: linear-gradient(135deg, #ffffff, #f7faff);
+    color: var(--ink);
+    font: inherit;
+    font-size: 12px;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.search::placeholder { color: #8a9690; }
+
+.search:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(0, 73, 173, 0.12);
+}
+
+.table-wrap { overflow-x: auto; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+
+thead { background: linear-gradient(90deg, #edf4ff 0%, #f6f9ff 72%, #fafdff 100%); }
+
+th {
+    padding: 13px 20px;
+    color: #63758d;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px 20px;
+    border-top: 1px solid #edf1f7;
+    color: #53647b;
+    font-size: 12px;
+}
+
+tbody tr { transition: background 120ms ease; }
+tbody tr:hover { background: linear-gradient(90deg, #f4f8ff 0%, #fbfdff 100%); }
+
+.student-name {
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.student-id {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.program {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #eef5ff, #f5f9ff);
+    color: #355982;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.gpa {
+    display: inline-block;
+    min-width: 48px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #e6f0ff, #f0f6ff);
+    color: var(--blue);
+    font-weight: 700;
+    text-align: center;
+}
+
+.empty-state {
+    padding: 44px 20px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.empty-state strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--ink);
+    font-size: 14px;
+}
+
+@media (max-width: 640px) {
+    .topbar { height: 60px; padding: 0 20px; }
+    .topbar-label { font-size: 11px; }
+    main { width: calc(100% - 36px); padding-top: 34px; }
+    .page-heading { align-items: flex-start; flex-direction: column; gap: 20px; }
+    .record-summary { width: 100%; }
+    .directory-toolbar { align-items: stretch; flex-direction: column; gap: 14px; padding: 18px; }
+    .search { width: 100%; }
+    th, td { padding-right: 14px; padding-left: 14px; }
+}
